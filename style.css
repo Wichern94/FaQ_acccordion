@@ -1,0 +1,148 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+--Lightpink: hsl(275, 100%, 97%);
+--Grayishpurple: hsl(292, 16%, 49%);
+--Darkpurple: hsl(292, 42%, 14%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    min-width: 400px;
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Lightpink);
+    font-family:"Work Sans",sans-serif ;
+    font-size: 15px;
+    
+}
+.faq-acccordion{
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.4);
+    background-color: var(--White);
+    display: flex;
+    width: 500px;
+    height: auto;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.faq-heading{
+    margin: 10px 0px 10px 20px;
+    display: flex;
+    text-align: center;
+}
+.faq-heading img{
+    height:25px;
+    width: 25px;
+    margin: 15px 0px 0px 0px;
+
+}
+.faq-heading h1{
+    margin:10px
+}
+details{
+    
+    border-bottom: 0.3px solid rgb(235, 219, 219);
+    min-height:40px;
+    text-align:left;
+    transition:max-height 0.5s ease-in-out ;
+    
+    
+    
+    padding: 10px 0;
+    margin:10px 15px 5px 30px;
+
+}
+ .q4{
+    border-bottom: none;
+}
+
+
+details[open] {
+    border-top: none;
+    
+    
+
+}
+summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+}
+summary:hover{
+    color:rgb(143, 31, 177);
+}
+summary::marker{
+    display: none;
+}
+summary::after{
+    content: url(/assets/images/icon-plus.svg);
+    width: 10px;
+    height: 10px;
+    margin: 0px 20px 20px 0px;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: 50% 50%;
+}
+details[open] summary::after{
+    content: url(/assets/images/icon-minus.svg);
+    transform: rotateX(180deg);
+   
+
+}
+
+
+p {
+    font-size: 13px;
+    color: silver;
+    margin: 10px 10px 0px 10px;
+    
+}
+
+    
+
+details[open] p::after {
+    display: block;
+    border-top: none;
+    border-bottom: none;
+}
+@media(max-width:768px){
+    body{
+        
+        min-width: 400px;
+        background-image: url(/assets/images/background-pattern-mobile.svg);
+        background-position: top;
+        background-repeat:no-repeat;
+        background-size: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--Lightpink);
+        font-family:"Work Sans",sans-serif ;
+        font-size: 15px;
+        
+    }
+    .faq-acccordion{
+        box-shadow: none;
+        background-color: var(--White);
+        display: flex;
+        width: 350px;
+        height: auto;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+
+} 
+    
+
